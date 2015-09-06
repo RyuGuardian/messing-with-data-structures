@@ -1,11 +1,11 @@
 'use strict';
 
 var expect = require('chai').expect;
-var Array = require(__dirname + '/../lib/array_methods');
+var Array = require(__dirname + '/../lib/array_methods'); /*jshint ignore:line */
 
 describe('Array', function() {
-	var arr = new Array;
-	var array = new Array;
+	var arr = [];
+	var array = [];
 
 	beforeEach(function() {
 		arr.length = 0;
@@ -61,7 +61,7 @@ describe('Array', function() {
 		});
 		it("should work on an array of length 1", function() {
 			expect([1].Shift()).to.eql(1);
-		})
+		});
 	});
 
 	describe('#Unshift', function() {

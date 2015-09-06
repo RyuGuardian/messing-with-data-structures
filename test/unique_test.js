@@ -10,8 +10,11 @@ describe('#unique', function() {
 	it("should return an array", function() {
 		expect(Array.isArray(unique([]))).to.eql(true);
 	});
+	it("should return an empty array when given an empty array", function() {
+		expect(unique([]).length).to.eql(0);
+	});
 	it("should return an array with unique items given one with duplicates", function() {
-		expect((unique(arrWithDupes)).toString()).to.eql("1,1,2,string,6,7,string2,true,Infinity,[object Object],[object Object]");
+		expect(unique(arrWithDupes).toString()).to.eql("1,1,2,string,6,7,string2,true,Infinity,[object Object],[object Object]");
 	});
 	it("should return an exact copy when given an array with unique items", function() {
 		expect(unique(arrWithoutDupes).toString()).to.eql("1,2,3,4,4,6,7,string,true,true,Infinity,Infinity,[object Object]");
