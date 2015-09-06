@@ -4,8 +4,8 @@ var expect = require('chai').expect;
 var Array = require(__dirname + '/../lib/array_methods');
 
 describe('Array', function() {
-	var arr = [];
-	var array = [];
+	var arr = new Array;
+	var array = new Array;
 
 	beforeEach(function() {
 		arr.length = 0;
